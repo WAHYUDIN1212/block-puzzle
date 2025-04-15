@@ -3,6 +3,7 @@ let draggedShape = null;
 
 function createGrid() {
   const grid = document.getElementById("grid");
+  grid.innerHTML = "";
   for (let y = 0; y < 8; y++) {
     for (let x = 0; x < 8; x++) {
       const cell = document.createElement("div");
@@ -19,7 +20,7 @@ function createGrid() {
           placeShape(draggedShape, startX, startY);
           generateBlocks();
         } else {
-          alert("Tidak bisa ditempatkan di sini.");
+          alert("Blok tidak bisa ditempatkan di sini.");
         }
         draggedShape = null;
       });
